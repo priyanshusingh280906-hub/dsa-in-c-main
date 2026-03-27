@@ -12,6 +12,7 @@ This repository contains basic Data Structures implementations in C.
 ---
 
 ## 📚 Stack Implementation in C (Array-based)
+
 This repository contains a professional implementation of the Stack Data Structure using the C programming language. I built this to master memory management, pointers, and the LIFO (Last-In, First-Out) principle.
 
 ### 🛠️ Features
@@ -34,7 +35,7 @@ A Stack is a linear data structure. Think of it like a stack of books:
 
 3. The last book you put down is the first one you pick up.
 
-### Technical Implementation:
+#### Technical Implementation:
 
 Top Index: We use an integer top initialized to -1.
 
@@ -44,9 +45,51 @@ Overflow Protection: The code automatically checks if top == MAX - 1 before allo
 
 ---
 
+## 🚶‍♂️ Queue Implementation in C (Array-based)
+
+This repository contains a robust implementation of the Queue Data Structure using C. This project was developed to understand linear data structures, index management, and the FIFO (First-In, First-Out) principle.
+
+### 🛠️ Features
+
+• Enqueue: Add an element to the "Rear" of the queue.
+
+• Dequeue: Remove an element from the "Front" of the queue.
+
+• Peek/Front: View the element at the front without removing it.
+
+• Full/Empty Checks: Safety checks to prevent memory errors.
+
+### 🧠 Core Logic Explained
+
+A Queue works exactly like a waiting line:
+
+1. The first person to join the line is the first one to be served.
+
+2. New items are added at the Back (Rear).
+
+3. Items are removed from the Front.
+
+#### Technical Implementation:
+
+• Two Pointers: We use front and rear integers to track both ends of the queue.
+
+• Initialization: Both front and rear start at -1.
+
+• FIFO Logic: When we Enqueue, rear increases. When we Dequeue, front increases.
+
+## 💡 Difference to remember:
+
+• Stack: Think of a stack of plates (Last in, First out).
+
+• Queue: Think of a bus stop line (First in, First out).
+
+---
+
 ## 📂 Project Structure
 
 stack.c - Contains the full stack logic and a driver program to test operations.
+
+queue.c - Complete source code with Enqueue and Dequeue logic.
 
 README.md - Documentation of the project.
 
