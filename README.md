@@ -1,13 +1,14 @@
-# DSA in C
+# 💫 DSA in C
 
 This repository contains basic Data Structures implementations in C.
 
 ---
 
-## Topics Covered
+## 🔥 Topics Covered
+
 - Stack
-- Queue (coming soon)
-- Linked List (coming soon)
+- Queue
+- Linked List
  
 ---
 
@@ -77,6 +78,8 @@ A Queue works exactly like a waiting line:
 
 • FIFO Logic: When we Enqueue, rear increases. When we Dequeue, front increases.
 
+---
+
 ## 💡 Difference to remember:
 
 • Stack: Think of a stack of plates (Last in, First out).
@@ -85,11 +88,49 @@ A Queue works exactly like a waiting line:
 
 ---
 
+## 🔗 Singly Linked List Implementation in C
+
+This repository contains a dynamic implementation of a Singly Linked List. Unlike arrays, this data structure can grow and shrink in size during runtime, making it highly memory-efficient for large datasets.
+
+### 🛠️ Features
+
+• Insert at Beginning: Add a new node to the start of the list.
+
+• Insert at End: Traverse the list to add a node at the tail.
+
+• Delete Node: Remove a specific value and reconnect the pointers.
+
+• Display: Traverse and print all elements in the list.
+
+### 🧠 Core Logic Explained
+
+A Linked List is like a Scavenger Hunt:
+
+1. You start at the Head (the first clue).
+
+2. Each "node" contains two things:
+
+  • Data: The actual value (like an integer).
+
+  • Next: A pointer (the address) to where the next node is hidden.
+
+3. The last node points to NULL, telling you the hunt is over.
+
+#### Why use this over an Array?
+
+• Dynamic Size: You don't have to define a MAX_SIZE. It grows as much as your RAM allows.
+
+• Easy Insertion/Deletion: You don't have to "shift" all the other elements like you do in an array. You just change where the arrows (pointers) point.
+
+---
+
 ## 📂 Project Structure
 
 stack.c - Contains the full stack logic and a driver program to test operations.
 
 queue.c - Complete source code with Enqueue and Dequeue logic.
+
+linkedlist.c - Source code using struct and malloc().
 
 README.md - Documentation of the project.
 
