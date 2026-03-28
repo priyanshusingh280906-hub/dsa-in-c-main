@@ -23,21 +23,6 @@ void addStudent() {
     printf("Student added successfully\n");
 }
 
-void displayStudents() {
-    if (count == 0) {
-        printf("No students found\n");
-        return;
-    }
-
-    printf("\nStudent List:\n");
-    for (int i = 0; i < count; i++) {
-        printf("ID: %d | Name: %s | Marks: %.2f\n",
-               students[i].id,
-               students[i].name,
-               students[i].marks);
-    }
-}
-
 void searchStudent() {
     int id, found = 0;
 
