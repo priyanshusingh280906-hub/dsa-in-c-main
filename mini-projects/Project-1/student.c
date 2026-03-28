@@ -59,12 +59,35 @@ void searchStudent() {
     }
 }
 
+void deleteStudent() {
+    int id, found = 0;
+    printf("Enter ID to delete: ");
+    scanf("%d", &id);
+
+    for (int i = 0; i < count; i++) {
+        if (students[i].id == id) {
+            // Shift all subsequent students one position to the left
+            for (int j = i; j < count - 1; j++) {
+                students[j] = students[j + 1];
+            }
+            count--;
+            found = 1;
+            printf("Student with ID %d deleted successfully.\n", id);
+            break;
+        }
+    }
+
+    if (!found) {
+        printf("Student ID not found.\n");
+    }
+}
+
 int main() {
     int choice;
 
     while (1) {
         printf("\n--- Student Management ---\n");
-        printf("1. Add Student\n2. Display Students\n3. Search Student\n4. Exit\n");
+        printf("1. Add Student\n2. Display Students\n3. Search Student\n4. Delete Student\n5. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
 
@@ -79,6 +102,9 @@ int main() {
                 searchStudent();
                 break;
             case 4:
+                deleteStudent();
+                break;
+            case 5:
                 return 0;
             default:
                 printf("Invalid choice\n");
