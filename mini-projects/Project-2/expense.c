@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Expense {
     float amount;
@@ -8,6 +9,18 @@ struct Expense {
 struct Expense expenses[100];
 int count = 0;
 
+void addIncome() {
+    if (count < 100) {
+        printf("Enter amount: ");
+        scanf("%f", &expenses[count].amount);
+        printf("Enter category: ");
+        scanf("%s", expenses[count].category);
+        count++;
+    } else {
+        printf("Transaction limit reached\n");
+    }
+}
+
 void addExpense() {
     if (count < 100) {
         printf("Enter amount: ");
@@ -16,7 +29,7 @@ void addExpense() {
         scanf("%s", expenses[count].category);
         count++;
     } else {
-        printf("Expense limit reached\n");
+        printf("Transaction limit reached\n");
     }
 }
 
@@ -45,15 +58,18 @@ int main() {
 
         switch (choice) {
             case 1:
-                addExpense();
+                addIncome();
                 break;
             case 2:
-                viewExpenses();
+                addExpense();
                 break;
             case 3:
-                totalSpending();
+                viewExpenses();
                 break;
             case 4:
+                totalSpending();
+                break;
+            case 5:
                 return 0;
             default:
                 printf("Invalid choice\n");
